@@ -1,0 +1,22 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: storage_db_dev
+  pool: 5
+  host: localhost
+  username: <%= ENV['DBUSER'] %>
+  password: <%= ENV['DBPASS'] %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: storage_db_test
+  pool: 5
+  username: <%= ENV['DBUSER'] %>
+  password: <%= ENV['DBPASS'] %>
+
+staging:
+  url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>
