@@ -1,0 +1,32 @@
+<%= form_for user, multipart: true do |form| %>
+  <div class="form-group">
+    <%= form.label :username %>
+    <%= form.text_field :username, class:"form-control", placeholder:"Enter username" %>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.email_field :email, class:"form-control", placeholder:"Enter email" %>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= form.label :phonenumber %>
+    <%= form.phone_field :phonenumber, class:"form-control", placeholder:"Enter phonenumber" %>
+  </div>
+  <br>
+
+  <div class="form-group">
+    <%= form.label :avatar %>
+    <%= form.file_field :avatar, class:"form-control", direct_upload: true, accept: 'image/png,image/gif,image/jpeg' %>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-6">
+      <%= form.submit value:"#{submit_btn}", class:"btn btn-sm btn-success" %>
+      <%= link_to "Back", users_path, class:"btn btn-sm btn-danger" %>
+    </div>
+  </div>
+<% end %>

@@ -17,6 +17,7 @@ gem 'puma', '~> 5.0'
 
 gem 'bootstrap', '~> 5.1.3'
 gem 'dotenv-rails'
+gem 'image_processing', '>= 1.2'
 gem 'pry'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
